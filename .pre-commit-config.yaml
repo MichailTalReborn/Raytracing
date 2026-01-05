@@ -1,0 +1,23 @@
+default_language_version:
+  python: python3.14
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-added-large-files
+-   repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v15.0.7
+    hooks:
+    -   id: clang-format
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.4.2
+    hooks:
+    -   id: remove-crlf
+        stages: [pre-commit]
+-   repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.1.1
+    hooks:
+    -   id: conventional-pre-commit
+        stages: [commit-msg]
